@@ -7,66 +7,112 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Elvis Dev
-            </h1>
-            <nav className="hidden md:flex space-x-6">
-              <a href="#home" className="hover:text-blue-400 transition-colors">Início</a>
-              <a href="#features" className="hover:text-blue-400 transition-colors">Funcionalidades</a>
-              <a href="#about" className="hover:text-blue-400 transition-colors">Sobre</a>
-              <a href="#github" className="hover:text-blue-400 transition-colors">GitHub</a>
-            </nav>
-            <button 
-              className="md:hidden text-white"
-              onClick={() => document.querySelector('.mobile-menu')?.classList.toggle('active')}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Elvis Dev
+          </h1>
+          <nav className="hidden md:flex space-x-6">
+            <a href="#home" className="hover:text-blue-400 transition-colors">
+              Início
+            </a>
+            <a href="#features" className="hover:text-blue-400 transition-colors">
+              Funcionalidades
+            </a>
+            <a href="#about" className="hover:text-blue-400 transition-colors">
+              Sobre
+            </a>
+            <a href="#github" className="hover:text-blue-400 transition-colors">
+              GitHub
+            </a>
+            <a href="#future" className="hover:text-blue-400 transition-colors">
+              Futuro
+            </a>
+          </nav>
+          <button
+            className="md:hidden text-white"
+            onClick={() =>
+              document.querySelector(".mobile-menu")?.classList.toggle("active")
+            }
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </header>
 
       {/* Mobile Menu */}
-      <div className="mobile-menu fixed top-0 left-0 w-70 h-full bg-gray-900/95 backdrop-blur-sm z-50 transform -translate-x-full transition-transform duration-300">
-        <div 
-          className="menu-close absolute top-4 right-4 text-2xl text-white cursor-pointer"
-          onClick={() => document.querySelector('.mobile-menu')?.classList.remove('active')}
+      <div className="mobile-menu fixed inset-0 bg-gray-900/95 backdrop-blur-sm transform -translate-x-full transition-transform duration-300 z-40">
+        <div className="absolute top-4 right-4 text-2xl cursor-pointer" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+          ×
+        </div>
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <a href="#home" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+            Início
+          </a>
+          <a href="#features" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+            Funcionalidades
+          </a>
+          <a href="#about" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+            Sobre
+          </a>
+          <a href="#github" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+            GitHub
+          </a>
+          <a href="#future" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
+            Futuro
+          </a>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center pt<dyad-write path="src/pages/Index.tsx" description="Complete rewritten Index page with proper JSX, lucide icons, and future projects section">
+"use client";
+
+import { Code, Palette, Shield } from "lucide-react";
+import { MadeWithDyad } from "@/components/made-with-dyad";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      {/* Header */}
+      <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Elvis Dev
+          </h1>
+          <nav className="hidden md:flex space-x-6">
+            <a href="#home" className="hover:text-blue-400 transition-colors">Início</a>
+            <a href="#features" className="hover:text-blue-400 transition-colors">Funcionalidades</a>
+            <a href="#about" className="hover:text-blue-400 transition-colors">Sobre</a>
+            <a href="#github" className="hover:text-blue-400 transition-colors">GitHub</a>
+            <a href="#future" className="hover:text-blue-400 transition-colors">Futuro</a>
+          </nav>
+          <button
+            className="md:hidden text-white"
+            onClick={() => document.querySelector(".mobile-menu")?.classList.toggle("active")}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      <div className="mobile-menu fixed inset-0 bg-gray-900/95 backdrop-blur-sm transform -translate-x-full transition-transform duration-300 z-40">
+        <div
+          className="absolute top-4 right-4 text-2xl cursor-pointer"
+          onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}
         >
           ×
         </div>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
-          <a 
-            href="#home" 
-            className="text-white text-xl hover:text-blue-400"
-            onClick={() => document.querySelector('.mobile-menu')?.classList.remove('active')}
-          >
-            Início
-          </a>
-          <a 
-            href="#features" 
-            className="text-white text-xl hover:text-blue-400"
-            onClick={() => document.querySelector('.mobile-menu')?.classList.remove('active')}
-          >
-            Funcionalidades
-          </a>
-          <a 
-            href="#about" 
-            className="text-white text-xl hover:text-blue-400"
-            onClick={() => document.querySelector('.mobile-menu')?.classList.remove('active')}
-          >
-            Sobre
-          </a>
-          <a 
-            href="#github" 
-            className="text-white text-xl hover:text-blue-400"
-            onClick={() => document.querySelector('.mobile-menu')?.classList.remove('active')}
-          >
-            GitHub
-          </a>
+          <a href="#home" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>Início</a>
+          <a href="#features" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>Funcionalidades</a>
+          <a href="#about" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>Sobre</a>
+          <a href="#github" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>GitHub</a>
+          <a href="#future" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>Futuro</a>
         </div>
       </div>
 
@@ -93,34 +139,34 @@ const Index = () => {
             {/* Card 1 */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
+                <Code className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Desenvolvimento Web</h3>
-              <p className="text-gray-300">Criação de aplicações web modernas e responsivas com as melhores tecnologias do mercado.</p>
+              <p className="text-gray-300">
+                Criação de aplicações web modernas e responsivas com as melhores tecnologias do mercado.
+              </p>
             </div>
-            
+
             {/* Card 2 */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
+                <Palette className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Design UI/UX</h3>
-              <p className="text-gray-300">Interfaces intuitivas e experiências de usuário memoráveis com design moderno.</p>
+              <p className="text-gray-300">
+                Interfaces intuitivas e experiências de usuário memoráveis com design moderno.
+              </p>
             </div>
-            
+
             {/* Card 3 */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Segurança</h3>
-              <p className="text-gray-300">Aplicações seguras e confiáveis com as melhores práticas de segurança da informação.</p>
+              <p className="text-gray-300">
+                Aplicações seguras e confiáveis com as melhores práticas de segurança da informação.
+              </p>
             </div>
           </div>
         </div>
@@ -168,6 +214,23 @@ const Index = () => {
           >
             Acessar GitHub
           </a>
+        </div>
+      </section>
+
+      {/* Future Projects Section */}
+      <section id="future" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Futuros Projetos</h2>
+          <div className="max-w-4xl mx-auto bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+            <h3 className="text-2xl font-bold mb-4">App para Crianças com Autismo</h3>
+            <p className="text-gray-300 mb-4">
+              Estamos desenvolvendo um aplicativo interativo dedicado ao desenvolvimento da aprendizagem de crianças com autismo.
+              O app utilizará técnicas de ensino personalizadas, jogos educativos e acompanhamento de progresso para auxiliar no desenvolvimento cognitivo e social.
+            </p>
+            <p className="text-gray-300">
+              A interface será colorida, intuitiva e adaptada às necessidades individuais, garantindo uma experiência de aprendizagem envolvente e eficaz.
+            </p>
+          </div>
         </div>
       </section>
 
