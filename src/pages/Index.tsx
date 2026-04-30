@@ -1,74 +1,5 @@
 "use client";
 
-import { MadeWithDyad } from "@/components/made-with-dyad";
-
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-      {/* Header */}
-      <header className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Elvis Dev
-          </h1>
-          <nav className="hidden md:flex space-x-6">
-            <a href="#home" className="hover:text-blue-400 transition-colors">
-              Início
-            </a>
-            <a href="#features" className="hover:text-blue-400 transition-colors">
-              Funcionalidades
-            </a>
-            <a href="#about" className="hover:text-blue-400 transition-colors">
-              Sobre
-            </a>
-            <a href="#github" className="hover:text-blue-400 transition-colors">
-              GitHub
-            </a>
-            <a href="#future" className="hover:text-blue-400 transition-colors">
-              Futuro
-            </a>
-          </nav>
-          <button
-            className="md:hidden text-white"
-            onClick={() =>
-              document.querySelector(".mobile-menu")?.classList.toggle("active")
-            }
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </header>
-
-      {/* Mobile Menu */}
-      <div className="mobile-menu fixed inset-0 bg-gray-900/95 backdrop-blur-sm transform -translate-x-full transition-transform duration-300 z-40">
-        <div className="absolute top-4 right-4 text-2xl cursor-pointer" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-          ×
-        </div>
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
-          <a href="#home" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-            Início
-          </a>
-          <a href="#features" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-            Funcionalidades
-          </a>
-          <a href="#about" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-            Sobre
-          </a>
-          <a href="#github" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-            GitHub
-          </a>
-          <a href="#future" className="text-xl hover:text-blue-400" onClick={() => document.querySelector(".mobile-menu")?.classList.remove("active")}>
-            Futuro
-          </a>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt<dyad-write path="src/pages/Index.tsx" description="Complete rewritten Index page with proper JSX, lucide icons, and future projects section">
-"use client";
-
 import { Code, Palette, Shield } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
@@ -90,7 +21,9 @@ const Index = () => {
           </nav>
           <button
             className="md:hidden text-white"
-            onClick={() => document.querySelector(".mobile-menu")?.classList.toggle("active")}
+            onClick={() =>
+              document.querySelector(".mobile-menu")?.classList.toggle("active")
+            }
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
